@@ -8,7 +8,6 @@ elif platform.system() == "Windows":
     req_file = "win-requirements.txt"
 else:
     req_file = 'requirements.txt'
-    #dep_link = ['http://python-xlib.svn.sourceforge.net/viewvc/python-xlib/tags/xlib_0_15rc1/?view=tar#egg=pyxlib']
 
 with open(os.path.join(os.path.dirname(__file__), req_file)) as f:
     requires = list(f.readlines())

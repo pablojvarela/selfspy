@@ -39,6 +39,7 @@ from PyObjCTools import AppHelper
 import config as cfg
 import signal
 import time
+import objc
 
 FORCE_SCREEN_CHANGE = 10
 WAIT_ANIMATION = 1
@@ -51,6 +52,7 @@ class Sniffer:
         self.screen_hook = lambda x: True
         self.last_check_windows = time.time()
 
+    @objc.python_method
     def createAppDelegate(self):
         sc = self
 
