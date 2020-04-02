@@ -32,6 +32,7 @@ else:
 from selfspy import models
 from selfspy.models import Process, Window, Geometry, Click, Keys
 
+from functools import reduce
 
 SKIP_MODIFIERS = {"", "Shift_L", "Control_L", "Super_L", "Alt_L", "Super_R", "Control_R", "Shift_R", "[65027]"}  # [65027] is AltGr in X for some ungodly reason.
 
@@ -194,7 +195,7 @@ class ActivityStore:
             else:
                 curtext = ''.join(keys)
 
-            self.session.add(Keys(curtext.encode('utf8'),
+            self.session.add(Keys(curtext.encode("utf-8"),
                                   keys,
                                   timings,
                                   nrkeys,

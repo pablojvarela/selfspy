@@ -166,7 +166,7 @@ class Keys(SpookMixin, Base):
     timings = Column(Binary)
 
     def __init__(self, text, keys, timings, nrkeys, started, process_id, window_id, geometry_id):
-        ztimings = zlib.compress(json.dumps(timings))
+        ztimings = zlib.compress(bytes(json.dumps(timings), "latin-1"))
 
         self.encrypt_text(text)
         self.encrypt_keys(keys)
@@ -184,7 +184,7 @@ class Keys(SpookMixin, Base):
         self.text = ztext
 
     def encrypt_keys(self, keys, other_encrypter=None):
-        zkeys = maybe_encrypt(zlib.compress(json.dumps(keys)),
+        zkeys = maybe_encrypt(zlib.compress(bytes(json.dumps(keys), "latin-1")),
                               other_encrypter=other_encrypter)
         self.keys = zkeys
 

@@ -1,3 +1,8 @@
+
+> :warning: 
+This is a **python3** fork of selfspy/selfspy project.\
+It is a migration to python3 from original python2.7.
+
 ### What is this?
 Selfspy is a daemon for Unix/X11, (thanks to @ljos!) Mac OS X and (thanks to @Foxboron) Windows, that continuously monitors and stores what you are doing on your computer. This way, you can get all sorts of nifty statistics and reminders on what you have been up to. It is inspired by the [Quantified Self](http://en.wikipedia.org/wiki/Quantified_Self)-movement and [Stephen Wolfram's personal key logging](http://blog.stephenwolfram.com/2012/03/the-personal-analytics-of-my-life/).
 
@@ -23,7 +28,7 @@ https://aur.archlinux.org/packages/selfspy-git/
 
 To install manually, either clone the repository from Github (git clone git://github.com/gurgeh/selfspy), or click on the Download link on http://github.com/gurgeh/selfspy/ to get the latest Python source.
 
-Selfspy is only tested with Python 2.7 and has a few dependencies on other Python libraries that need to be satisfied. These are documented in the requirements.txt file. If you are on Linux, you will need subversion installed for pip to install python-xlib. If you are on Mac, you will not need to install python-xlib at all. Python-xlib is currently a tricky package to include in the requirements since it is not on PyPi.
+This fork of Selfspy is only tested with Python 3.7 and has a few dependencies on other Python libraries that need to be satisfied. These are documented in the requirements.txt file. If you are on Linux, you will need subversion installed for pip to install python-xlib. If you are on Mac, you will not need to install python-xlib at all. Python-xlib is currently a tricky package to include in the requirements since it is not on PyPi.
 ```
 pip install svn+https://python-xlib.svn.sourceforge.net/svnroot/python-xlib/tags/xlib_0_15rc1/ # Only do this step on Linux!
 python setup.py install
@@ -32,7 +37,7 @@ python setup.py install
 You will also need the ``Tkinter`` python libraries. On ubuntu and debian
 
 ```
-sudo apt-get install python-tk
+sudo apt-get install python3-tk
 ```
 
 On FreeBSD
