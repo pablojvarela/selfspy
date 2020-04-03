@@ -151,7 +151,7 @@ class PasswordDialog(Dialog):
         self.e1.grid(row=0, column=1)
 
         self.cb = Checkbutton(master, text="Save to keychain", variable=self.checkVar)
-        self.cb.pack()
+        #self.cb.pack()
         self.cb.grid(row=1, columnspan=2, sticky=W)
         self.e1.configure(show='*')
 
