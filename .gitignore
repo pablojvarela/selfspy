@@ -9,5 +9,10 @@ bin/
 lib/
 include/
 .python-version
-.idea/
+venv/
+
 *.bak
+
+#IDE
+.idea/
+
